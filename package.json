@@ -1,0 +1,25 @@
+{
+  "name": "typescript_course",
+  "version": "1.0.0",
+  "description": "API Desenvolvida Utilizando TS, NODE, ES6, Postgres e Sequelize",
+  "main": "server.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/candinhojr/typescript_course.git"
+  },
+  "keywords": [
+    "API",
+    "TypeScript",
+    "Node",
+    "ES6"
+  ],
+  "author": "Candinho Luiz Dalla Brida Junior",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/candinhojr/typescript_course/issues"
+  },
+  "homepage": "https://github.com/candinhojr/typescript_course#readme"
+}
