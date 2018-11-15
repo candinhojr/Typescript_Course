@@ -6,7 +6,7 @@ Projeto pessoal cujo objetivo é aprender na prática sobre TypeScript
 ![GitHub last commit](https://img.shields.io/github/last-commit/google/skia.svg)
 
 ## Sobre o Projeto
-Projeto feito com o auxílio do *NPM*. NPM é o nome reduzido de Node Package Manager (Gerenciador de Pacotes do Node), e a NPM é duas coisas:
+Projeto feito com o auxílio do **NPM**. NPM é o nome reduzido de Node Package Manager (Gerenciador de Pacotes do Node), e a NPM é duas coisas:
 - Primeiro, e mais importante, é um repositório online para publicação de projetos de código aberto para o Node.js;
 - Segundo, ele é um utilitário de linha de comando que interage com este repositório online, que ajuda na instalação de pacotes, gerenciamento de versão e gerenciamento de dependências.
 
@@ -36,22 +36,23 @@ A seguir as dependências do projeto.
 04. Instalação das Dependências do Projeto, e adicionando o script de 'start';
 05. Instalando Bibliotecas de Terceiros - @types como Dependências de Desenvolvimento;
 06. Criando o arquivo tsconfig.json e definindo suas propriedades;
-  - compilerOptions, com algumas propriedades:
-    - target (alvo): que no caso o arquivo ts será compilado para qual versão do js. Neste caso es5;
-    - module (módulo): que neste caso será o common-js;
-    - outDir (diretório de saída): no caso de para que diretório irão os códigos gerados. Neste caso eles irão para o diretório build;
-    - typeRoots (raíz de tipos): definindo o @types;
-    - types (tipos): adicionando o node.
-  - include, para incluir todos os arquivos que o compilador vai trabalhar;
-  - exclude, já que nem tudo passará pelo compilador;
-  - compileOnSave com valor 'true', pois cada vez que o arquivo for salvo ele será compilado;
-  - buildOnSave com valor 'true', pois cada vez que o arquivo for salvo ele vai fazer o build automaticamente, e já vai enviar os aquivos para o diretório definido.
+    - compilerOptions, com algumas propriedades:
+      - target (alvo): que no caso o arquivo ts será compilado para qual versão do js. Neste caso es5;
+      - module (módulo): que neste caso será o common-js;
+      - outDir (diretório de saída): no caso de para que diretório irão os códigos gerados. Neste caso eles irão para o diretório build;
+      - typeRoots (raíz de tipos): definindo o @types;
+      - types (tipos): adicionando o node.
+    - include, para incluir todos os arquivos que o compilador vai trabalhar;
+    - exclude, já que nem tudo passará pelo compilador;
+    - compileOnSave com valor 'true', pois cada vez que o arquivo for salvo ele será compilado;
+    - buildOnSave com valor 'true', pois cada vez que o arquivo for salvo ele vai fazer o build automaticamente, e já vai enviar os aquivos para o diretório definido.
 07. Instalando o Sequelize CLI como dependência de projeto e desenvolvimento;
 08. Definindo a Estrutura de Diretórios Inicial;
-  - Criado os diretórios:
-    - api: que conterá a classe principal que se comunicará com o web service e ficará responsável por receber as requisições e enviar as respostas ao cliente;
-    - config: conterá as configurações para os diferentes tipos de ambientes de trabalho;
-    - module: contetá o core da aplicação, o controller, services, interfaces. Conterá os diferentes módulos da aplicação.
+    - Criado os diretórios:
+      - api: que conterá a classe principal que se comunicará com o web service e ficará responsável por receber as requisições e enviar as respostas ao cliente;
+      - config: conterá as configurações para os diferentes tipos de ambientes de trabalho;
+      - module: contetá o core da aplicação, o controller, services, interfaces. Conterá os diferentes módulos da aplicação.
 09. Criando o Servidor Web;
 10. Criando a Classe Principal da API;
 11. Criando o Middleware Error Handler;
+12. Criando as Rotas da API;
