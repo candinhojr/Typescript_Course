@@ -5,6 +5,7 @@
   "main": "server/server.ts",
   "scripts": {
     "start": "./node_modules/.bin/ts-node ./server/server.ts",
+    "builded": "node ./build/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,7 +18,7 @@
     "Node",
     "ES6"
   ],
-  "author": "Candinho Luiz Dalla Brida Junior",
+  "author": "Candinho Luiz Dalla Brida Junior <candinholuiz@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/candinhojr/typescript_course/issues"
