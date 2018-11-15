@@ -19,8 +19,14 @@ A seguir as dependências do projeto.
 - *http*: Para criarmos o servidor;
 - *morgan*: Middleware de logger de solicitação de HTTP, responsável por gerar os logs no console da aplicação, sobre as requisições feitas à aplicação;
 - *pg*: Módulo de conexão entre o Node e o banco de dados Postgres.
+- *sequelize-cli*: ORM para trabalharmos com o js e com alguns banco de dados, entre eles o Postgres.
 
 ### Dependências de Desenvolvimento
+- *@types/body-parser*;
+- *@types/express*;
+- *@types/morgan*;
+- *@types/sequelize*;
+- *sequelize*;
 - *ts-node*: Para execução de TypeScript e REPL no node.js.
 
 ## Commits:
@@ -40,3 +46,4 @@ A seguir as dependências do projeto.
     - exclude, já que nem tudo passará pelo compilador;
     - compileOnSave com valor 'true', pois cada vez que o arquivo for salvo ele será compilado;
     - buildOnSave com valor 'true', pois cada vez que o arquivo for salvo ele vai fazer o build automaticamente, e já vai enviar os aquivos para o diretório definido.
+07. Instalando o Sequelize CLI como dependência de projeto e desenvolvimento;
