@@ -54,4 +54,4 @@ A seguir as dependências do projeto.
     - module: contetá o core da aplicação, o controller, services, interfaces. Conterá os diferentes módulos da aplicação.
 09. Criando o Servidor Web;
 10. Criando a Classe Principal da API;
-11.
+11. Criando o Middleware Error Handler;
