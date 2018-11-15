@@ -52,4 +52,6 @@ A seguir as dependências do projeto.
     - api: que conterá a classe principal que se comunicará com o web service e ficará responsável por receber as requisições e enviar as respostas ao cliente;
     - config: conterá as configurações para os diferentes tipos de ambientes de trabalho;
     - module: contetá o core da aplicação, o controller, services, interfaces. Conterá os diferentes módulos da aplicação.
-09.  Criando o Servidor Web
+09. Criando o Servidor Web;
+10. Criando a Classe Principal da API;
+11.
