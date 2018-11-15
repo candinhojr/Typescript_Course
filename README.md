@@ -24,5 +24,19 @@ A seguir as dependências do projeto.
 - *ts-node*: Para execução de TypeScript e REPL no node.js.
 
 ## Commits:
-01. Criação do Projeto - NPM e Package.json a partir do comando npm init;
-02. Instalação das Dependências do Projeto, e adicionando o script de 'start';
+01. Innitial commit;
+02. Update README.md;
+03. Criação do Projeto - NPM e Package.json a partir do comando npm init;
+04. Instalação das Dependências do Projeto, e adicionando o script de 'start';
+05. ;
+06. Criando o arquivo tsconfig.json e definindo suas propriedades;
+    - compilerOptions, com algumas propriedades:
+      - target (alvo): que no caso o arquivo ts será compilado para qual versão do js. Neste caso es5;
+      - module (módulo): que neste caso será o common-js;
+      - outDir (diretório de saída): no caso de para que diretório irão os códigos gerados. Neste caso eles irão para o diretório build;
+      - typeRoots (raíz de tipos): definindo o @types;
+      - types (tipos): adicionando o node.
+    - include, para incluir todos os arquivos que o compilador vai trabalhar;
+    - exclude, já que nem tudo passará pelo compilador;
+    - compileOnSave com valor 'true', pois cada vez que o arquivo for salvo ele será compilado;
+    - buildOnSave com valor 'true', pois cada vez que o arquivo for salvo ele vai fazer o build automaticamente, e já vai enviar os aquivos para o diretório definido.
