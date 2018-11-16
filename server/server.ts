@@ -4,7 +4,7 @@ import { errorHandlerApi } from './api/errorHandlerApi';
 
 const config = require('./config/env/config')();
 
-const server = http.createServer();
+const server = http.createServer(Api);
 
 Api.use(errorHandlerApi);
 

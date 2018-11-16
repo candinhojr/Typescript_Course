@@ -6,7 +6,7 @@ var Routes = (function () {
     }
     Routes.prototype.getRoutes = function (app) {
         app.route('/').get(function (request, response) { return response.send('Hello, world!'); });
-        app.route('/ola/:nome').get(function (request, response) { return response.send('Hello ${request.params.nome}'); });
+        app.route('/ola/:nome').get(function (request, response) { return response.send("Hello " + request.params.nome); });
     };
     return Routes;
 }());
