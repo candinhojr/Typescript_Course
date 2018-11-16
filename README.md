@@ -57,5 +57,5 @@ A seguir as dependências do projeto.
 11. Criando o Middleware Error Handler;
 12. Criando as Rotas da API;
 13. Criando Módulo Config - Isolando Parâmetros de Configuração da Aplicação;
-14. Importando os Módulos - Integrando Componentes da Aplicação;
-15.
+14. 15. Importando os Módulos - Integrando Componentes da Aplicação;
+16. Refatorando o Servidor - Deixando mais Completo;
