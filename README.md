@@ -56,3 +56,4 @@ A seguir as dependências do projeto.
 10. Criando a Classe Principal da API;
 11. Criando o Middleware Error Handler;
 12. Criando as Rotas da API;
+13. Criando Módulo Config - Isolando Parâmetros de Configuração da Aplicação;
