@@ -59,4 +59,6 @@ A seguir as dependências do projeto.
 13. Criando Módulo Config - Isolando Parâmetros de Configuração da Aplicação;
 14. e 15. Importando os Módulos - Integrando Componentes da Aplicação;
 16. Refatorando o Servidor - Deixando mais Completo;
-17. Preparando o Ambiente de Testes;
+17. e 18. Preparando o Ambiente de Testes;
+19. Skelleton de Testes Unitários;
+20. Escrevendo os primeiros Testes de Integração;
