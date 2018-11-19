@@ -5,8 +5,11 @@ var Routes = (function () {
         this.getRoutes(app);
     }
     Routes.prototype.getRoutes = function (app) {
-        app.route('/').get(function (request, response) { return response.send('Hello, world!'); });
-        app.route('/ola/:nome').get(function (request, response) { return response.send("Hello, " + request.params.nome); });
+        app.route('/api/users/all').get(this.router.index);
+        app.route('/api/users/create').get(this.router.create);
+        app.route('/api/users/:id').get(this.router.findOne);
+        app.route('/api/users/:id/update').get(this.router.update);
+        app.route('/api/users/:id/destroy').get(this.router.destroy);
     };
     return Routes;
 }());

@@ -63,3 +63,5 @@ A seguir as dependências do projeto.
 19. Skelleton de Testes Unitários;
 20. Escrevendo os primeiros Testes de Integração;
 21. Rodando os Testes de Integração - Eles irão falhar e é isso mesmo que queremos!;
+22. Módulo Users - Refatorando as Rotas;
+23. Implementando os Métodos para Atender as Rotas;
