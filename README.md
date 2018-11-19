@@ -62,3 +62,4 @@ A seguir as dependências do projeto.
 17. e 18. Preparando o Ambiente de Testes;
 19. Skelleton de Testes Unitários;
 20. Escrevendo os primeiros Testes de Integração;
+21. Rodando os Testes de Integração - Eles irão falhar e é isso mesmo que queremos!;
