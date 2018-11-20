@@ -67,3 +67,4 @@ A seguir as dependências do projeto.
 23. Implementando os Métodos para Atender as Rotas;
 24. Rodando o Sequelize;
 25. Modelando Dados com Sequelize e Sincronizando com o Banco de Dados;
+26. Subindo a Aplicação - Tabela Criada no Banco de Dados;

@@ -4,28 +4,28 @@ function default_1(sequelize, DataTypes) {
     var User = sequelize.define('User', {
         id: {
             type: DataTypes.INTEGER,
-            primarykey: true,
+            primaryKey: true,
             autoIncrement: true
         },
         name: {
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
-                notEmply: true
+                notEmpty: true
             }
         },
         email: {
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
-                notEmply: true
+                notEmpty: true
             }
         },
         password: {
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
-                notEmply: true
+                notEmpty: true
             }
         }
     });
