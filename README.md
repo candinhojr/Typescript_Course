@@ -66,3 +66,4 @@ A seguir as dependências do projeto.
 22. Módulo Users - Refatorando as Rotas;
 23. Implementando os Métodos para Atender as Rotas;
 24. Rodando o Sequelize;
+25. Modelando Dados com Sequelize e Sincronizando com o Banco de Dados;
