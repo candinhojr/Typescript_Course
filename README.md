@@ -65,3 +65,4 @@ A seguir as dependências do projeto.
 21. Rodando os Testes de Integração - Eles irão falhar e é isso mesmo que queremos!;
 22. Módulo Users - Refatorando as Rotas;
 23. Implementando os Métodos para Atender as Rotas;
+24. Rodando o Sequelize;
