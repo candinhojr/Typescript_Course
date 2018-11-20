@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var UserController = (function () {
+var UserController = /** @class */ (function () {
     function UserController() {
     }
     UserController.prototype.getAll = function (request, response) {
