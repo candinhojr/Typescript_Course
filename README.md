@@ -68,3 +68,4 @@ A seguir as dependências do projeto.
 24. Rodando o Sequelize;
 25. Modelando Dados com Sequelize e Sincronizando com o Banco de Dados;
 26. Subindo a Aplicação - Tabela Criada no Banco de Dados;
+27. Implementando o Controller;
