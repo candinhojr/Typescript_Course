@@ -9,13 +9,13 @@ describe('Testes de Integração', function () {
     var id;
     var userTest = {
         id: 100,
-        nome: 'Usuário Teste',
+        name: 'Usuário Teste',
         email: 'teste@email.com',
         password: 'teste'
     };
     var userDefault = {
         id: 1,
-        nome: 'Default User',
+        name: 'Default User',
         email: 'default@email.com',
         password: 'default'
     };
@@ -34,11 +34,14 @@ describe('Testes de Integração', function () {
         });
     });
     describe('GET /api/users/all', function () {
-        it('Deve retornar um Json com todos os Usuários', function (done) {
+        it('Deve retornar um Array com todos os Usuários', function (done) {
             helpers_1.request(helpers_1.app)
                 .get('/api/users/all')
                 .end(function (error, response) {
                 helpers_1.expect(response.status).to.equal(HTTPStatus.OK);
+                helpers_1.expect(response.body.payload).to.be.an('array');
+                helpers_1.expect(response.body.payload[0].name).to.be.equal(userDefault.name);
+                helpers_1.expect(response.body.payload[0].email).to.be.equal(userDefault.email);
                 done(error);
             });
         });

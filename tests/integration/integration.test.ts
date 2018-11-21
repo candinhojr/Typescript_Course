@@ -11,14 +11,14 @@ describe('Testes de Integração', () => {
 
   const userTest = {
     id: 100,
-    nome: 'Usuário Teste',
+    name: 'Usuário Teste',
     email: 'teste@email.com',
     password: 'teste'
   };
 
   const userDefault = {
     id: 1,
-    nome: 'Default User',
+    name: 'Default User',
     email: 'default@email.com',
     password: 'default'
   };
@@ -39,11 +39,14 @@ describe('Testes de Integração', () => {
   });
 
   describe('GET /api/users/all', () => {
-    it('Deve retornar um Json com todos os Usuários', done => {
+    it('Deve retornar um Array com todos os Usuários', done => {
       request(app)
         .get('/api/users/all')
         .end((error, response) => {
           expect(response.status).to.equal(HTTPStatus.OK);
+          expect(response.body.payload).to.be.an('array');
+          expect(response.body.payload[0].name).to.be.equal(userDefault.name);
+          expect(response.body.payload[0].email).to.be.equal(userDefault.email);
           done(error);
         });
     });
