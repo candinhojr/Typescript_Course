@@ -89,13 +89,16 @@ describe('Testes de Integração', () => {
   describe('PUT /api/users/:id/update', () => {
     it('Deve atualizar um Usuário', done => {
       const user = {
-        nome: 'TesteUpdate'
-      }
+        name: 'TesteUpdate',
+        email: 'update@email.com'
+      };
       request(app)
-        .put(`/api/users/${1}/update`)
+        .put(`/api/users/${userTest.id}/update`)
         .send(user)
         .end((error, response) => {
           expect(response.status).to.equal(HTTPStatus.OK);
+          expect(response.body.payload.name).to.be.equal(user.name);
+          expect(response.body.payload.email).to.be.equal(user.email);
           done(error);
         });
     });
@@ -103,7 +106,7 @@ describe('Testes de Integração', () => {
   describe('DELETE /api/users/:id/destroy', () => {
     it('Deve deletar um Usuário', done => {
       request(app)
-        .delete(`/api/users/${1}/destroy`)
+        .delete(`/api/users/${userTest.id}/destroy`)
         .end((error, response) => {
           expect(response.status).to.equal(HTTPStatus.OK);
           done(error);

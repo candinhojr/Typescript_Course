@@ -84,13 +84,16 @@ describe('Testes de Integração', function () {
     describe('PUT /api/users/:id/update', function () {
         it('Deve atualizar um Usuário', function (done) {
             var user = {
-                nome: 'TesteUpdate'
+                name: 'TesteUpdate',
+                email: 'update@email.com'
             };
             helpers_1.request(helpers_1.app)
-                .put("/api/users/" + 1 + "/update")
+                .put("/api/users/" + userTest.id + "/update")
                 .send(user)
                 .end(function (error, response) {
                 helpers_1.expect(response.status).to.equal(HTTPStatus.OK);
+                helpers_1.expect(response.body.payload.name).to.be.equal(user.name);
+                helpers_1.expect(response.body.payload.email).to.be.equal(user.email);
                 done(error);
             });
         });
@@ -98,7 +101,7 @@ describe('Testes de Integração', function () {
     describe('DELETE /api/users/:id/destroy', function () {
         it('Deve deletar um Usuário', function (done) {
             helpers_1.request(helpers_1.app)
-                .delete("/api/users/" + 1 + "/destroy")
+                .delete("/api/users/" + userTest.id + "/destroy")
                 .end(function (error, response) {
                 helpers_1.expect(response.status).to.equal(HTTPStatus.OK);
                 done(error);
