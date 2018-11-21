@@ -76,4 +76,6 @@ A seguir as dependências do projeto.
 32. Definindo os Requisitos Obrigatórios para os Testes de Integração - Parte 02;
 33. Definindo os Requisitos Obrigatórios para os Testes de Integração - Parte 03;
 34. Definindo os Requisitos Obrigatórios para os Testes de Integração - Parte 04;
-35. Refatorando os Testes de Integração Update e Destroy;
+35. e 36. Refatorando os Testes de Integração Update e Destroy;
+37. Promise - Usando a Biblioteca Bluebird;
+38. Implementando a Interface User;
