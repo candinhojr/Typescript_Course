@@ -47,7 +47,7 @@ describe('Testes de Integração', function () {
         });
     });
     describe('GET /api/users/:id', function () {
-        it('Deve retornar um Json com apenas um Usuário', function (done) {
+        it('Deve retornar um Array com apenas um Usuário', function (done) {
             helpers_1.request(helpers_1.app)
                 .get("/api/users/" + 1)
                 .end(function (error, response) {
@@ -59,13 +59,19 @@ describe('Testes de Integração', function () {
     describe('POST /api/users/create', function () {
         it('Deve criar um novo Usuário', function (done) {
             var user = {
-                nome: 'Teste'
+                id: 2,
+                name: 'Usuário Teste',
+                email: 'usuario@email.com',
+                password: 'novouser'
             };
             helpers_1.request(helpers_1.app)
                 .post('/api/users/create')
                 .send(user)
                 .end(function (error, response) {
                 helpers_1.expect(response.status).to.equal(HTTPStatus.OK);
+                helpers_1.expect(response.body.payload.id).to.be.eql(user.id);
+                helpers_1.expect(response.body.payload.name).to.be.eql(user.name);
+                helpers_1.expect(response.body.payload.email).to.be.eql(user.email);
                 done(error);
             });
         });
