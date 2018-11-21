@@ -1,3 +1,4 @@
+import * as HTTPStatus from 'http-status';
 import { app, request, expect } from './config/helpers';
 
 describe('Testes de Integração', () => {
@@ -6,7 +7,7 @@ describe('Testes de Integração', () => {
       request(app)
         .get('/api/users/all')
         .end((error, response) => {
-          expect(response.status).to.equal(200);
+          expect(response.status).to.equal(HTTPStatus.OK);
           done(error);
         });
     });
@@ -16,7 +17,7 @@ describe('Testes de Integração', () => {
       request(app)
         .get(`/api/users/${1}`)
         .end((error, response) => {
-          expect(response.status).to.equal(200);
+          expect(response.status).to.equal(HTTPStatus.OK);
           done(error);
         });
     });
@@ -30,7 +31,7 @@ describe('Testes de Integração', () => {
         .post('/api/users/create')
         .send(user)
         .end((error, response) => {
-          expect(response.status).to.equal(200);
+          expect(response.status).to.equal(HTTPStatus.OK);
           done(error);
         });
     });
@@ -44,7 +45,7 @@ describe('Testes de Integração', () => {
         .put(`/api/users/${1}/update`)
         .send(user)
         .end((error, response) => {
-          expect(response.status).to.equal(200);
+          expect(response.status).to.equal(HTTPStatus.OK);
           done(error);
         });
     });
@@ -54,7 +55,7 @@ describe('Testes de Integração', () => {
       request(app)
         .delete(`/api/users/${1}/destroy`)
         .end((error, response) => {
-          expect(response.status).to.equal(200);
+          expect(response.status).to.equal(HTTPStatus.OK);
           done(error);
       });
     });

@@ -71,3 +71,4 @@ A seguir as dependências do projeto.
 27. Implementando o Controller;
 28. Refatorar os Métodos para Atender as Rotas;
 29. Refatoração e Execução dos Testes de Integração - Fazendo os Testes Passarem;
+30. Usando a Biblioteca http-status
