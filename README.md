@@ -81,4 +81,6 @@ A seguir as dependências do projeto.
 40. CRUD Service - Implementação do Método Create;
 41. CRUD Service - Implementação do Método GetAll;
 42. CRUD Service - Implementação do Método GetById;
-43. CRUD Service - Implementação do Método getByEmail;
+43. CRUD Service - Implementação do Método GetByEmail;
+44. CRUD Service - Implementação do Método Update;
+45. CRUD Service - Implementação do Método Delete;

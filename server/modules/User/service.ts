@@ -45,5 +45,11 @@ class User implements IUser {
     });
   }
 
-  delete(id: number) {}
+  delete(id: number) {
+    return model.User.destroy({
+      where: {id}
+    });
+  }
 }
+
+export default new User();
