@@ -92,8 +92,7 @@ describe('Testes de Integração', function () {
                 .send(user)
                 .end(function (error, response) {
                 helpers_1.expect(response.status).to.equal(HTTPStatus.OK);
-                helpers_1.expect(response.body.payload.name).to.be.equal(user.name);
-                helpers_1.expect(response.body.payload.email).to.be.equal(user.email);
+                helpers_1.expect(response.body.payload[0]).to.be.equal(1);
                 done(error);
             });
         });
@@ -104,6 +103,7 @@ describe('Testes de Integração', function () {
                 .delete("/api/users/" + userTest.id + "/destroy")
                 .end(function (error, response) {
                 helpers_1.expect(response.status).to.equal(HTTPStatus.OK);
+                helpers_1.expect(response.body.payload).to.be.equal(1);
                 done(error);
             });
         });

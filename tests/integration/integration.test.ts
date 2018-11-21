@@ -97,8 +97,7 @@ describe('Testes de Integração', () => {
         .send(user)
         .end((error, response) => {
           expect(response.status).to.equal(HTTPStatus.OK);
-          expect(response.body.payload.name).to.be.equal(user.name);
-          expect(response.body.payload.email).to.be.equal(user.email);
+          expect(response.body.payload[0]).to.be.equal(1);
           done(error);
         });
     });
@@ -109,6 +108,7 @@ describe('Testes de Integração', () => {
         .delete(`/api/users/${userTest.id}/destroy`)
         .end((error, response) => {
           expect(response.status).to.equal(HTTPStatus.OK);
+          expect(response.body.payload).to.be.equal(1);
           done(error);
       });
     });
