@@ -49,9 +49,14 @@ describe('Testes de Integração', function () {
     describe('GET /api/users/:id', function () {
         it('Deve retornar um Array com apenas um Usuário', function (done) {
             helpers_1.request(helpers_1.app)
-                .get("/api/users/" + 1)
+                .get("/api/users/" + userDefault.id)
                 .end(function (error, response) {
                 helpers_1.expect(response.status).to.equal(HTTPStatus.OK);
+                helpers_1.expect(response.body.payload.id).to.be.eql(userDefault.id);
+                helpers_1.expect(response.body.payload).to.have.all.keys([
+                    'id', 'name', 'email', 'password'
+                ]);
+                id = response.body.payload.id;
                 done(error);
             });
         });

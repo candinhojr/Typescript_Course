@@ -52,11 +52,16 @@ describe('Testes de Integração', () => {
     });
   });
   describe('GET /api/users/:id', () => {
-    it('Deve retornar um Json com apenas um Usuário', done => {
+    it('Deve retornar um Array com apenas um Usuário', done => {
       request(app)
-        .get(`/api/users/${1}`)
+        .get(`/api/users/${userDefault.id}`)
         .end((error, response) => {
           expect(response.status).to.equal(HTTPStatus.OK);
+          expect(response.body.payload.id).to.be.eql(userDefault.id);
+          expect(response.body.payload).to.have.all.keys([
+            'id', 'name', 'email', 'password'
+          ]);
+          id = response.body.payload.id;
           done(error);
         });
     });
