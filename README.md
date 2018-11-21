@@ -71,4 +71,8 @@ A seguir as dependências do projeto.
 27. Implementando o Controller;
 28. Refatorar os Métodos para Atender as Rotas;
 29. Refatoração e Execução dos Testes de Integração - Fazendo os Testes Passarem;
-30. Usando a Biblioteca http-status
+30. Usando a Biblioteca http-status;
+31. Definindo os Requisitos Obrigatórios para os Testes de Integração - Parte 01;
+32. Definindo os Requisitos Obrigatórios para os Testes de Integração - Parte 02;
+33. Definindo os Requisitos Obrigatórios para os Testes de Integração - Parte 03;
+34. Definindo os Requisitos Obrigatórios para os Testes de Integração - Parte 04;
