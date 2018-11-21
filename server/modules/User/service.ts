@@ -11,9 +11,11 @@ class User implements IUser {
 
   constructor() {}
 
-  create(user: any) {}
+  create(user: any) {
+    return model.User.create(user);
+  }
 
-  getAll() Bluebird<IUser[]> {}
+  getAll(): Bluebird<IUser[]> {}
 
   getById(id: number): Bluebird<IUserDetail> {}
 
@@ -23,5 +25,3 @@ class User implements IUser {
 
   delete(id: number) {}
 }
-
-export default User;

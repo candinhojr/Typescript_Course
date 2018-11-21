@@ -78,3 +78,7 @@ A seguir as dependências do projeto.
 37. Promise - Usando a Biblioteca Bluebird;
 38. Implementando a Interface User;
 39. Implementando a Estrutura do Service;
+40. CRUD Service - Implementação do Método Create;
+41. CRUD Service - Implementação do Método GetAll;
+42. CRUD Service - Implementação do Método GetById;
+43. CRUD Service - Implementação do Método getByEmail;
