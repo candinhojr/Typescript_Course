@@ -2,8 +2,6 @@
 Projeto pessoal cujo objetivo é aprender na prática sobre TypeScript
 
 ![Cocoapods](https://img.shields.io/cocoapods/l/AFNetworking.svg)
-![GitHub top language](https://img.shields.io/github/languages/top/badges/shields.svg)
-![GitHub last commit](https://img.shields.io/github/last-commit/google/skia.svg)
 
 ## Sobre o Projeto
 Projeto feito com o auxílio do **NPM**. NPM é o nome reduzido de Node Package Manager (Gerenciador de Pacotes do Node), e a NPM é duas coisas:
@@ -79,3 +77,4 @@ A seguir as dependências do projeto.
 35. e 36. Refatorando os Testes de Integração Update e Destroy;
 37. Promise - Usando a Biblioteca Bluebird;
 38. Implementando a Interface User;
+39. Implementando a Estrutura do Service;
