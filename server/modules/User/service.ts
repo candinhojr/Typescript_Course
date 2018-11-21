@@ -15,7 +15,12 @@ class User implements IUser {
     return model.User.create(user);
   }
 
-  getAll(): Bluebird<IUser[]> {}
+  getAll(): Bluebird<IUser[]> {
+    return model.User.findAll({
+      order: ['name']
+    })
+    .then(createUsers);
+  }
 
   getById(id: number): Bluebird<IUserDetail> {}
 
