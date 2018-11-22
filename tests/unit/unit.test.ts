@@ -27,7 +27,13 @@ describe('Testes Unitários do Controller', () => {
   });
   describe('Método GET Users', () => {
     it('Deve retornar uma lista com todos os Usuários', () => {
-
+      const user = new User();
+      return user.getAll().then(data => {
+        expect(data).to.be.an('array');
+        expect(data[0]).to.be.all.keys(
+          ['email', 'id', 'name', 'password']
+        )
+      })
     });
   });
   describe('Método Delete', () => {

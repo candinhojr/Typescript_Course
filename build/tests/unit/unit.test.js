@@ -24,6 +24,11 @@ describe('Testes Unitários do Controller', function () {
     });
     describe('Método GET Users', function () {
         it('Deve retornar uma lista com todos os Usuários', function () {
+            var user = new service_1.default();
+            return user.getAll().then(function (data) {
+                helpers_1.expect(data).to.be.an('array');
+                helpers_1.expect(data[0]).to.be.all.keys(['email', 'id', 'name', 'password']);
+            });
         });
     });
     describe('Método Delete', function () {
