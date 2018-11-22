@@ -86,3 +86,4 @@ A seguir as dependências do projeto.
 45. CRUD Service - Implementação do Método Delete;
 46. Refatorando os Testes Unitários - Testando o Método Service Create;
 47. Refatorando os Testes Unitários - Testando o Método Service GetAll;
+48. Refatorando os Testes Unitários - Testando o Método Service Update;

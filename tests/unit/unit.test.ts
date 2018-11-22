@@ -22,9 +22,17 @@ describe('Testes Unitários do Controller', () => {
 
   describe('Método Update', () => {
     it('Deve atualizar um Usuário', () => {
-
+      const usuarioAtualizado = {
+        name: 'Nome Atualizado',
+        email: 'atualizado@email.com'
+      };
+      const user = new User();
+      return user.update(1, usuarioAtualizado).then(data => {
+        expect(data[0]).to.be.equal(1);
+      })
     });
   });
+
   describe('Método GET Users', () => {
     it('Deve retornar uma lista com todos os Usuários', () => {
       const user = new User();

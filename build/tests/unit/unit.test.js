@@ -20,6 +20,14 @@ describe('Testes Unitários do Controller', function () {
     });
     describe('Método Update', function () {
         it('Deve atualizar um Usuário', function () {
+            var usuarioAtualizado = {
+                name: 'Nome Atualizado',
+                email: 'atualizado@email.com'
+            };
+            var user = new service_1.default();
+            return user.update(1, usuarioAtualizado).then(function (data) {
+                helpers_1.expect(data[0]).to.be.equal(1);
+            });
         });
     });
     describe('Método GET Users', function () {
