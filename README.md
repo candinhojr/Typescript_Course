@@ -84,3 +84,4 @@ A seguir as dependências do projeto.
 43. CRUD Service - Implementação do Método GetByEmail;
 44. CRUD Service - Implementação do Método Update;
 45. CRUD Service - Implementação do Método Delete;
+46. Refatorando os Testes Unitários - Testando o Método Service Create;
