@@ -87,3 +87,4 @@ A seguir as dependências do projeto.
 46. Refatorando os Testes Unitários - Testando o Método Service Create;
 47. Refatorando os Testes Unitários - Testando o Método Service GetAll;
 48. Refatorando os Testes Unitários - Testando o Método Service Update;
+49. Refatorando os Testes Unitários - Testando o Método Service Delete;

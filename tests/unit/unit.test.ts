@@ -44,9 +44,13 @@ describe('Testes Unitários do Controller', () => {
       })
     });
   });
+
   describe('Método Delete', () => {
     it('Deve deletar um Usuário', () => {
-
+      const user = new User();
+      return user.delete(1).then(data => {
+        expect(data).to.be.equal(1);
+      })
     });
   });
 });
