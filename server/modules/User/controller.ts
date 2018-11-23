@@ -1,6 +1,8 @@
 import * as HTTPStatus from 'http-status';
 import { Request, Response } from 'express';
 import User from './service';
+import { userInfo } from 'os';
+import user from '../../models/user';
 
 class UserController {
 
@@ -33,9 +35,15 @@ class UserController {
   };
 
   getById(request: Request, response: Response) {
-    response.status(HTTPStatus.OK).json({
-      message: 'OK'
-    });
+    const userId = parseInt(request.params.id);
+    this.UserService
+      .getById(userId)
+      .then(data => {
+        response.status(HTTPStatus.OK).json({payload: data});
+      })
+      .catch(error => {
+        response.status(HTTPStatus.INTERNAL_SERVER_ERROR).json({payload: 'Erro ao buscar usuário'});
+      })
   };
 
   updateUser(request: Request, response: Response) {

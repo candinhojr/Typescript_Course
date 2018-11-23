@@ -29,8 +29,14 @@ var UserController = /** @class */ (function () {
     };
     ;
     UserController.prototype.getById = function (request, response) {
-        response.status(HTTPStatus.OK).json({
-            message: 'OK'
+        var userId = parseInt(request.params.id);
+        this.UserService
+            .getById(userId)
+            .then(function (data) {
+            response.status(HTTPStatus.OK).json({ payload: data });
+        })
+            .catch(function (error) {
+            response.status(HTTPStatus.INTERNAL_SERVER_ERROR).json({ payload: 'Erro ao buscar usuário' });
         });
     };
     ;
