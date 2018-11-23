@@ -96,3 +96,4 @@ A seguir as dependências do projeto.
 56. CRUD Controller - Implementação do Método DeleteUser;
 57. Criando Módulo Reutilizável de Success Handler;
 58. Criando Módulo Reutilizável de ErrorHandler;
+59. Criando um Error Handler para Operações do Banco de Dados;
