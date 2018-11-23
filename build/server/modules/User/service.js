@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var interface_1 = require("./interface");
 var model = require('../../models');
-var User = (function () {
+var User = /** @class */ (function () {
     function User() {
     }
     User.prototype.create = function (user) {
