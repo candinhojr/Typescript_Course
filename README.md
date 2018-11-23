@@ -95,3 +95,4 @@ A seguir as dependências do projeto.
 55. CRUD Controller - Implementação do Método UpdateUser;
 56. CRUD Controller - Implementação do Método DeleteUser;
 57. Criando Módulo Reutilizável de Success Handler;
+58. Criando Módulo Reutilizável de ErrorHandler;
