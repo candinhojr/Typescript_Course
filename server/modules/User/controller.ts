@@ -3,6 +3,7 @@ import { Request, Response } from 'express';
 import User from './service';
 import { userInfo } from 'os';
 import user from '../../models/user';
+import { error } from 'util';
 
 class UserController {
 
@@ -16,10 +17,10 @@ class UserController {
     this.UserService
       .getAll()
       .then(data => {
-        response.status(HTTPStatus.OK).json({payload: data});
+        response.status(HTTPStatus.OK).json({ payload: data });
       })
       .catch(error => {
-        response.status(HTTPStatus.INTERNAL_SERVER_ERROR).json({payload: 'Erro ao buscar todos os usuários'});
+        response.status(HTTPStatus.INTERNAL_SERVER_ERROR).json({ payload: 'Erro ao buscar todos os usuários' });
       })
   };
 
@@ -27,10 +28,10 @@ class UserController {
     this.UserService
       .create(request.body)
       .then(data => {
-        response.status(HTTPStatus.OK).json({payload: data});
+        response.status(HTTPStatus.OK).json({ payload: data });
       })
       .catch(error => {
-        response.status(HTTPStatus.INTERNAL_SERVER_ERROR).json({payload: 'Erro ao cadastrar novo usuário'});
+        response.status(HTTPStatus.INTERNAL_SERVER_ERROR).json({ payload: 'Erro ao cadastrar novo usuário' });
       })
   };
 
@@ -39,17 +40,24 @@ class UserController {
     this.UserService
       .getById(userId)
       .then(data => {
-        response.status(HTTPStatus.OK).json({payload: data});
+        response.status(HTTPStatus.OK).json({ payload: data });
       })
       .catch(error => {
-        response.status(HTTPStatus.INTERNAL_SERVER_ERROR).json({payload: 'Erro ao buscar usuário'});
+        response.status(HTTPStatus.INTERNAL_SERVER_ERROR).json({ payload: 'Erro ao buscar usuário' });
       })
   };
 
   updateUser(request: Request, response: Response) {
-    response.status(HTTPStatus.OK).json({
-      message: 'OK'
-    });
+    const userId = parseInt(request.params.id);
+    const props = request.body;
+    this.UserService
+      .update(userId, props)
+      .then(data => {
+        response.status(HTTPStatus.OK).json({ payload: data });
+      })
+      .catch(error => {
+        response.status(HTTPStatus.INTERNAL_SERVER_ERROR).json({ payload: 'Erro ao atualizar usuário' });
+      })
   };
 
   deleteUser(request: Request, response: Response) {

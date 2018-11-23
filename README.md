@@ -92,3 +92,4 @@ A seguir as dependências do projeto.
 51. CRUD Controller - Implementação do Método GetAll;
 52. e 53. CRUD Controller - Implementação do Método CreateUser;
 54. CRUD Controller - Implementação do Método GetById;
+55. CRUD Controller - Implementação do Método UpdateUser;

@@ -41,8 +41,15 @@ var UserController = /** @class */ (function () {
     };
     ;
     UserController.prototype.updateUser = function (request, response) {
-        response.status(HTTPStatus.OK).json({
-            message: 'OK'
+        var userId = parseInt(request.params.id);
+        var props = request.body;
+        this.UserService
+            .update(userId, props)
+            .then(function (data) {
+            response.status(HTTPStatus.OK).json({ payload: data });
+        })
+            .catch(function (error) {
+            response.status(HTTPStatus.INTERNAL_SERVER_ERROR).json({ payload: 'Erro ao atualizar usuário' });
         });
     };
     ;
