@@ -90,3 +90,4 @@ A seguir as dependências do projeto.
 49. Refatorando os Testes Unitários - Testando o Método Service Delete;
 50. Implementando os Testes Unitários GetByEmail e GetById;
 51. CRUD Controller - Implementação do Método GetAll;
+52. CRUD Controller - Implementação do Método CreateUser;
