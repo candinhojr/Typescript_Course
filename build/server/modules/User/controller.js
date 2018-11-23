@@ -1,18 +1,30 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var HTTPStatus = require("http-status");
+var service_1 = require("./service");
 var UserController = /** @class */ (function () {
     function UserController() {
+        this.UserService = new service_1.default();
     }
     UserController.prototype.getAll = function (request, response) {
-        response.status(HTTPStatus.OK).json({
-            message: 'OK'
+        this.UserService
+            .getAll()
+            .then(function (data) {
+            response.status(HTTPStatus.OK).json({ payload: data });
+        })
+            .catch(function (error) {
+            response.status(HTTPStatus.INTERNAL_SERVER_ERROR).json({ payload: 'Erro ao buscar todos os usuários' });
         });
     };
     ;
     UserController.prototype.createUser = function (request, response) {
-        response.status(HTTPStatus.OK).json({
-            message: 'OK'
+        this.UserService
+            .create(request.body)
+            .then(function (data) {
+            response.status(HTTPStatus.OK).json({ payload: data });
+        })
+            .catch(function (error) {
+            response.status(HTTPStatus.INTERNAL_SERVER_ERROR).json({ payload: 'Erro ao cadastrar novo usuário' });
         });
     };
     ;

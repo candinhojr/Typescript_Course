@@ -12,19 +12,24 @@ class UserController {
 
   getAll(request: Request, response: Response) {
     this.UserService
-    .getAll()
-    .then(data => {
-      response.status(HTTPStatus.OK).json({payload: data});
-    })
-    .catch(error => {
-      response.status(HTTPStatus.INTERNAL_SERVER_ERROR).json({payload: 'Erro ao buscar os usuários'});
-    })
+      .getAll()
+      .then(data => {
+        response.status(HTTPStatus.OK).json({payload: data});
+      })
+      .catch(error => {
+        response.status(HTTPStatus.INTERNAL_SERVER_ERROR).json({payload: 'Erro ao buscar todos os usuários'});
+      })
   };
 
   createUser(request: Request, response: Response) {
-    response.status(HTTPStatus.OK).json({
-      message: 'OK'
-    });
+    this.UserService
+      .create(request.body)
+      .then(data => {
+        response.status(HTTPStatus.OK).json({payload: data});
+      })
+      .catch(error => {
+        response.status(HTTPStatus.INTERNAL_SERVER_ERROR).json({payload: 'Erro ao cadastrar novo usuário'});
+      })
   };
 
   getById(request: Request, response: Response) {
