@@ -97,3 +97,4 @@ A seguir as dependências do projeto.
 57. Criando Módulo Reutilizável de Success Handler;
 58. Criando Módulo Reutilizável de ErrorHandler;
 59. Criando um Error Handler para Operações do Banco de Dados;
+60. Refatorando o Controller - Usando os Handlers Criados;
