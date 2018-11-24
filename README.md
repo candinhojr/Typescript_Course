@@ -108,3 +108,4 @@ A seguir as dependências do projeto.
 61. Instalando as Dependências e Definindo as Rotas do Token;
 62. Implementando a Estratégia de Autenticação;
 63. Criando a Função de Autentificação Bem Sucedida;
+64. Criando a Função de Falha na Autenticação;

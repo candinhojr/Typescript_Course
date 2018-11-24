@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var jwt = require("jwt-simple");
 var HTTPStatus = require("http-status");
-var config = require('../../config/env/config');
+var config = require('../../config/env/config')();
 function authSuccess(response, credentials, data) {
     var isMatch = (credentials.password == data.password);
     if (isMatch) {
@@ -12,7 +12,7 @@ function authSuccess(response, credentials, data) {
         });
     }
     else {
-        response.status(HTTPStatus.UNAUTHORIZED);
+        response.sendStatus(HTTPStatus.UNAUTHORIZED);
     }
 }
 exports.default = authSuccess;
