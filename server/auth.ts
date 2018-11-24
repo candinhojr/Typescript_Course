@@ -7,7 +7,7 @@ export default function AuthConfig() {
     const UserService = new User();
     let opts = {
         secretOrKey: config.secret,
-        jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken()
+        jwtFromRequest: ExtractJwt.fromAuthHeaderWithScheme('JWT') //ExtractJwt.fromAuthHeaderAsBearerToken() - Desse modo se usa o Bearer ao passar o token 
     };
 
     passport.use(new Strategy(opts, (jwtPayload, done) => {

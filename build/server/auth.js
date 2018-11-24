@@ -8,7 +8,7 @@ function AuthConfig() {
     var UserService = new service_1.default();
     var opts = {
         secretOrKey: config.secret,
-        jwtFromRequest: passport_jwt_1.ExtractJwt.fromAuthHeaderAsBearerToken()
+        jwtFromRequest: passport_jwt_1.ExtractJwt.fromAuthHeaderWithScheme('JWT') //ExtractJwt.fromAuthHeaderAsBearerToken() - Desse modo se usa o Bearer ao passar o token 
     };
     passport.use(new passport_jwt_1.Strategy(opts, function (jwtPayload, done) {
         UserService

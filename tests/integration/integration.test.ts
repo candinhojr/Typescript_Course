@@ -78,6 +78,8 @@ describe('Testes de Integração', () => {
     it('Deve retornar um Array com todos os Usuários', done => {
       request(app)
         .get('/api/users/all')
+        .set('Content-Type', 'application/json')
+        .set('Authorization', `JWT ${token}`) //`Bearer ${token}`
         .end((error, response) => {
           expect(response.status).to.equal(HTTPStatus.OK);
           expect(response.body.payload).to.be.an('array');
@@ -87,10 +89,13 @@ describe('Testes de Integração', () => {
         });
     });
   });
+
   describe('GET /api/users/:id', () => {
     it('Deve retornar um Array com apenas um Usuário', done => {
       request(app)
         .get(`/api/users/${userDefault.id}`)
+        .set('Content-Type', 'application/json')
+        .set('Authorization', `JWT ${token}`)
         .end((error, response) => {
           expect(response.status).to.equal(HTTPStatus.OK);
           expect(response.body.payload.id).to.be.eql(userDefault.id);
@@ -112,6 +117,8 @@ describe('Testes de Integração', () => {
       };
       request(app)
         .post('/api/users/create')
+        .set('Content-Type', 'application/json')
+        .set('Authorization', `JWT ${token}`)
         .send(user)
         .end((error, response) => {
           expect(response.status).to.equal(HTTPStatus.OK);
@@ -130,6 +137,8 @@ describe('Testes de Integração', () => {
       };
       request(app)
         .put(`/api/users/${userTest.id}/update`)
+        .set('Content-Type', 'application/json')
+        .set('Authorization', `JWT ${token}`)
         .send(user)
         .end((error, response) => {
           expect(response.status).to.equal(HTTPStatus.OK);
@@ -142,6 +151,8 @@ describe('Testes de Integração', () => {
     it('Deve deletar um Usuário', done => {
       request(app)
         .delete(`/api/users/${userTest.id}/destroy`)
+        .set('Content-Type', 'application/json')
+        .set('Authorization', `JWT ${token}`)
         .end((error, response) => {
           expect(response.status).to.equal(HTTPStatus.OK);
           expect(response.body.payload).to.be.equal(1);
