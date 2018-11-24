@@ -30,6 +30,7 @@ A seguir as dependências do projeto.
 ## Commits:
 01. Innitial commit;
 02. Update README.md;
+- Iniciando o Desenvolvimento da API:
 03. Criação do Projeto - NPM e Package.json a partir do comando npm init;
 04. Instalação das Dependências do Projeto, e adicionando o script de 'start';
 05. Instalando Bibliotecas de Terceiros - @types como Dependências de Desenvolvimento;
@@ -57,10 +58,14 @@ A seguir as dependências do projeto.
 13. Criando Módulo Config - Isolando Parâmetros de Configuração da Aplicação;
 14. e 15. Importando os Módulos - Integrando Componentes da Aplicação;
 16. Refatorando o Servidor - Deixando mais Completo;
+
+-Testes Autimatizados:
 17. e 18. Preparando o Ambiente de Testes;
 19. Skelleton de Testes Unitários;
 20. Escrevendo os primeiros Testes de Integração;
 21. Rodando os Testes de Integração - Eles irão falhar e é isso mesmo que queremos!;
+
+-Continuação do Projeto:
 22. Módulo Users - Refatorando as Rotas;
 23. Implementando os Métodos para Atender as Rotas;
 24. Rodando o Sequelize;
@@ -98,3 +103,6 @@ A seguir as dependências do projeto.
 58. Criando Módulo Reutilizável de ErrorHandler;
 59. Criando um Error Handler para Operações do Banco de Dados;
 60. Refatorando o Controller - Usando os Handlers Criados;
+
+- Autenticando Usuários na Aplicação:
+61. Instalando as Dependências e Definindo as Rotas do Token;
