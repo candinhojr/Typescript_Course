@@ -107,3 +107,4 @@ A seguir as dependências do projeto.
 - Autenticando Usuários na Aplicação:
 61. Instalando as Dependências e Definindo as Rotas do Token;
 62. Implementando a Estratégia de Autenticação;
+63. Criando a Função de Autentificação Bem Sucedida;
