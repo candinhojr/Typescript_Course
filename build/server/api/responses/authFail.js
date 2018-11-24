@@ -4,5 +4,5 @@ var HTTPStatus = require("http-status");
 function authFail(request, response) {
     response.sendStatus(HTTPStatus.UNAUTHORIZED);
 }
-exports.authFail = authFail;
+exports.default = authFail;
 ;
