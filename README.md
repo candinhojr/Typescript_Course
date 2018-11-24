@@ -110,3 +110,4 @@ A seguir as dependências do projeto.
 63. Criando a Função de Autentificação Bem Sucedida;
 64. Criando a Função de Falha na Autenticação;
 65. Implementando o Método Auth;
+66. Acionando o Middleware de Autentificação;
