@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+var jwt = require("jwt-simple");
 var HTTPStatus = require("http-status");
 var helpers_1 = require("./config/helpers");
 describe('Testes de Integração', function () {
@@ -7,6 +8,7 @@ describe('Testes de Integração', function () {
     var config = require('../../server/config/env/config')();
     var model = require('../../server/models');
     var id;
+    var token;
     var userTest = {
         id: 100,
         name: 'Usuário Teste',
@@ -29,7 +31,38 @@ describe('Testes de Integração', function () {
             .then(function (user) {
             model.User.create(userTest)
                 .then(function () {
+                token = jwt.encode({ id: user.id }, config.secret);
                 done();
+            });
+        });
+    });
+    describe('POST /token', function () {
+        it('Deve receber um JWT', function (done) {
+            var credentials = {
+                email: userDefault.email,
+                password: userDefault.password
+            };
+            helpers_1.request(helpers_1.app)
+                .post('/token')
+                .send(credentials)
+                .end(function (error, response) {
+                helpers_1.expect(response.status).to.equal(HTTPStatus.OK);
+                helpers_1.expect(response.body.token).to.equal("" + token);
+                done(error);
+            });
+        });
+        it('Não deve gerar Token', function (done) {
+            var credentials = {
+                email: 'email@emailqualquer.com',
+                password: 'qualquer'
+            };
+            helpers_1.request(helpers_1.app)
+                .post('/token')
+                .send(credentials)
+                .end(function (error, response) {
+                helpers_1.expect(response.status).to.equal(HTTPStatus.UNAUTHORIZED);
+                helpers_1.expect(response.body).to.empty;
+                done(error);
             });
         });
     });

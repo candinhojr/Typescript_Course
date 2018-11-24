@@ -1,5 +1,7 @@
+import * as jwt from 'jwt-simple';
 import * as HTTPStatus from 'http-status';
 import { app, request, expect } from './config/helpers';
+import { error } from 'util';
 
 describe('Testes de Integração', () => {
 
@@ -8,6 +10,7 @@ describe('Testes de Integração', () => {
   const model = require('../../server/models');
 
   let id;
+  let token;
 
   const userTest = {
     id: 100,
@@ -33,9 +36,42 @@ describe('Testes de Integração', () => {
     .then(user => {
       model.User.create(userTest)
         .then(() => {
+          token = jwt.encode({ id: user.id }, config.secret);
           done();
         })
     })
+  });
+
+  describe('POST /token', () => {
+    it('Deve receber um JWT', done => {
+      const credentials = {
+        email: userDefault.email,
+        password: userDefault.password
+      };
+      request(app)
+        .post('/token')
+        .send(credentials)
+        .end((error, response) => {
+          expect(response.status).to.equal(HTTPStatus.OK);
+          expect(response.body.token).to.equal(`${token}`);
+          done(error);
+        });
+    });
+
+    it('Não deve gerar Token', done => {
+      const credentials = {
+        email: 'email@emailqualquer.com',
+        password: 'qualquer'
+      };
+      request(app)
+        .post('/token')
+        .send(credentials)
+        .end((error, response) => {
+          expect(response.status).to.equal(HTTPStatus.UNAUTHORIZED);
+          expect(response.body).to.empty;
+          done(error);
+        });
+    });
   });
 
   describe('GET /api/users/all', () => {
