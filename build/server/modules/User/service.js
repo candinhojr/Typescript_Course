@@ -30,6 +30,8 @@ var User = /** @class */ (function () {
         return model.User.update(user, {
             where: { id: id },
             fields: ['name', 'email', 'password'],
+            hooks: true,
+            individualHooks: true
         });
     };
     User.prototype.delete = function (id) {

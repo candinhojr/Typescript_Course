@@ -40,8 +40,8 @@ class User implements IUser {
     return model.User.update(user, {
       where: {id},
       fields: ['name', 'email', 'password'],
-      //hooks: true,
-      //individualHooks: true
+      hooks: true,
+      individualHooks: true
     });
   }
 

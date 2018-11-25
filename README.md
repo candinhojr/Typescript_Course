@@ -115,3 +115,4 @@ A seguir as dependências do projeto.
 68. Refatorando e Executando os Testes de Integração;
 
 - Criptografia:
+69. Instalando a Biblioteca bcrypt e Criptografando a Senha do Usuário;
