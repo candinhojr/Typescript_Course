@@ -8,6 +8,8 @@
     "builded": "NODE_ENV=development node ./build/server/server.js",
     "unit-test": "NODE_ENV=test mocha --opts build/tests/unit/config/mocha.opts ./build/tests/unit/unit.test.js",
     "integration-test": "NODE_ENV=test mocha --opts build/tests/integration/config/mocha.opts ./build/tests/integration/integration.test.js",
+    "integration-coverage": "nyc --reporter=html npm run integration-test",
+    "unit-coverage": "nyc --reporter=html npm run unit-test",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -57,7 +59,9 @@
     "@types/sequelize": "^4.27.30",
     "@types/supertest": "^2.0.6",
     "chai": "^4.2.0",
+    "istanbul": "^0.4.5",
     "mocha": "^5.2.0",
+    "nyc": "^13.1.0",
     "sequelize": "^4.41.2",
     "supertest": "^3.3.0",
     "testdouble": "^3.8.2",

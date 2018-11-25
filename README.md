@@ -116,3 +116,6 @@ A seguir as dependências do projeto.
 
 - Criptografia:
 69. Instalando a Biblioteca bcrypt e Criptografando a Senha do Usuário;
+
+- Cobertura de Código:
+70. Code Coverage - Instalando a Biblioteca Istanbul + Nyc e Implementando e Gerando os Relatórios;
